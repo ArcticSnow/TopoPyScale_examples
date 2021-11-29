@@ -32,10 +32,10 @@ Folder `ex2_romania_retezat`
 Add a folder with a DEM and a complete `config.ini` file. To not overload the Github repo with data add in the `.gitignore` file lines to exclude the climate data and outputs such as:
 
 ```txt
-ex2_romania_retezat/inputs/forcings/* 
+ex2_romania_retezat/inputs/climate/* 
 ex2_romania_retezat/outputs/*
 
-ex1_norway_finse/inputs/forcings/*
+ex1_norway_finse/inputs/climate/*
 ex1_norway_finse/outputs/*
 ```
 
