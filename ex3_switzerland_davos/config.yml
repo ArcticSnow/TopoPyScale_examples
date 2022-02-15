@@ -1,0 +1,42 @@
+project:
+    name: Davos
+    description: Downscaling for Davos
+    authors:
+        - Fiddes J.
+        - Filhol S.
+        - Aalstad K.
+    date: Jan 2022
+    directory: /home/simonfi/github/TopoPyScale_examples/ex3_switzerland_davos/
+    start: 2020-01-01
+    end: 2020-01-31
+    extent: 
+    CPU_cores: 4
+    climate: era5
+
+climate:
+    era5:
+        path: inputs/climate/
+        product: reanalysis
+        timestep: 1H
+        plevels: [300,400, 500,600, 700,1000]
+        download_threads: 12
+
+dem:
+    file: dem_SRTM1_proj.tif
+    epsg: 32632
+    horizon_increments: 10
+
+sampling:
+    method: toposub
+    points:
+        csv_file: station_list.csv
+
+    toposub:
+        clustering_method: minibatchkmean
+        n_clusters: 100
+        random_seed: 2
+
+toposcale:
+    interpolation_method: idw
+    pt_sampling_method: nearest
+    LW_terrain_contribution: True
