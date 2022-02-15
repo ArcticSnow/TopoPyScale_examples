@@ -1,0 +1,42 @@
+project:
+    name: Finse
+    description: Downscaling for Finse, Benchmarking TopoPyScale for debuging
+    authors:
+        - Filhol S.
+        - Aalstad K.
+        - Fiddes J.
+    date: Nov 2021
+    directory: /home/simonfi/github/TopoPyScale_examples/ex1_norway_finse/
+    start: 2018-01-01
+    end: 2018-01-31
+    extent: 
+    CPU_cores: 4
+    climate: era5
+
+climate:
+    era5:
+        path: inputs/climate/
+        product: reanalysis
+        timestep: 1H
+        plevels: [700,750,775,800,825,850,875,900,925,950,975,1000]
+        download_threads: 12
+
+dem:
+    file: ASTER_Finse_Kris_clip.tif
+    epsg: 32632
+    horizon_increments: 10
+
+sampling:
+    method: toposub
+    points:
+        csv_file: station_list.csv
+
+    toposub:
+        clustering_method: minibatchkmean
+        n_clusters: 50
+        random_seed: 2
+
+toposcale:
+    interpolation_method: idw
+    pt_sampling_method: nearest
+    LW_terrain_contribution: True
