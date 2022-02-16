@@ -25,7 +25,7 @@ mp.compute_dem_param()
 
 # ----- Option 1:
 # Compute clustering of the input DEM and extract cluster centroids
-mp.extract_dem_cluster_param()
+mp.extract_topo_param()
 # plot clusters
 mp.toposub.plot_clusters_map()
 mp.toposub.write_landform()
