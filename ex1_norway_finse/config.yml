@@ -7,8 +7,8 @@ project:
         - Fiddes J.
     date: Nov 2021
     directory: /home/simonfi/github/TopoPyScale_examples/ex1_norway_finse/
-    start: 2018-01-01
-    end: 2018-01-31
+    start: 2018-10-01
+    end: 2018-12-31
     extent: 
     CPU_cores: 4
     climate: era5
