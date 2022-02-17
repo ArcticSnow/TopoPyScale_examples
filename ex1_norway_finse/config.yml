@@ -6,10 +6,10 @@ project:
         - Aalstad K.
         - Fiddes J.
     date: Nov 2021
-    directory: /home/simonfi/github/TopoPyScale_examples/ex1_norway_finse/
+    directory: /home/joel/src/TopoPyScale_examples/ex1_norway_finse/
     start: 2018-10-01
     end: 2018-12-31
-    extent: 
+    extent:
     CPU_cores: 4
     climate: era5
 
@@ -22,7 +22,7 @@ climate:
         download_threads: 12
 
 dem:
-    file: ASTER_Finse_Kris_clip.tif
+    file: ASTER_Finse_Kris.tif
     epsg: 32632
     horizon_increments: 10
 
