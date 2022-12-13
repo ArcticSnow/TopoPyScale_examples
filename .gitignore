@@ -4,6 +4,8 @@ ex2_romania_retezat/outputs/*
 ex1_norway_finse/inputs/climate/*
 ex1_norway_finse/outputs/*
 
+.idea/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
