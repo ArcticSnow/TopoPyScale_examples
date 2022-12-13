@@ -1,7 +1,7 @@
-ex2_romania_retezat/inputs/forcings/*
+ex2_romania_retezat/inputs/climate/*
 ex2_romania_retezat/outputs/*
 
-ex1_norway_finse/inputs/forcings/*
+ex1_norway_finse/inputs/climate/*
 ex1_norway_finse/outputs/*
 
 # Byte-compiled / optimized / DLL files

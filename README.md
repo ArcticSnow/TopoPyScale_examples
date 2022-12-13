@@ -1,18 +1,27 @@
 # TopoPyScale_examples
 Set of examples on which to run [TopoPyScale](https://github.com/ArcticSnow/TopoPyScale)
 
+**WARNINGS**
+1. You need a Python VE setup with TopoPyScale installed
+2. `cdsapi` credentials must be ready
+3. These script will download the climate data from Copernicus ERA5 repository
+
 Contributors:
 
-- Simon Filhol, October 2021
-
+- Simon Filhol
+- Joel Fiddes
 
 
 ## Usage with TopoPyScale
 
 1. Clone the repository
-2. modify the `project_dir` in `config-ini` to fit your path
-3. Run TopoPyScale
+2. modify the `project_dir` in `config.yml` to fit your path
+3. Run the pipeline within your relevant virtual environment
+```
+python pipeline.py
+```
 
+Now you may wait for the climate data to download. Downscaling will follow.
 
 
 ## Example 1: Finse in Norway
@@ -20,16 +29,18 @@ Contributors:
 Folder `ex1_norway_finse`
 
 
-
 ## Example 2: Retezat Mountain Range in Romania
 
 Folder `ex2_romania_retezat`
 
+## Example 3: Davos in Switzerland
+
+Folder `ex3_switzerland_davos`
 
 
 ## Adding an example site
 
-Add a folder with a DEM and a complete `config.ini` file. To not overload the Github repo with data add in the `.gitignore` file lines to exclude the climate data and outputs such as:
+Add a folder with a DEM and a complete `config.yml` file. To not overload the Github repo with data add in the `.gitignore` file lines to exclude the climate data and outputs such as:
 
 ```txt
 ex2_romania_retezat/inputs/climate/* 
