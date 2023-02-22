@@ -31,7 +31,7 @@ dem:
     horizon_increments: 10
 
 sampling:
-    method: point
+    method: points
     points:
         csv_file: station_list.csv
 
@@ -39,6 +39,8 @@ sampling:
         clustering_method: minibatchkmean
         n_clusters: 10
         random_seed: 2
+        clustering_features: {'x':1, 'y':1, 'elevation':4, 'slope':1, 'aspect_cos':1, 'aspect_sin':1, 'svf':1}
+
 
 toposcale:
     interpolation_method: idw
