@@ -6,9 +6,9 @@ project:
         - Aalstad K.
         - Fiddes J.
     date: Nov 2021
-    directory: /home/simonfi/github/TopoPyScale_examples/ex1_norway_finse/
-    start: 2020-01-01
-    end: 2021-08-31
+    directory: ./TopoPyScale_examples/ex1_norway_finse/
+    start: 2018-10-01
+    end: 2018-12-31
     split:
         IO: False
         time: 1  # run indivudal batch in time
