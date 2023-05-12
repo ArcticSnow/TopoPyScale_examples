@@ -5,7 +5,7 @@ print('\n ------------------------------- \n')
 print('Toposub Spatial Downscaling Example')
 print('\n ------------------------------- \n')
 
-config_file = '/config_test.yml'
+config_file = './config_test.yml'
 mp = tc.Topoclass(config_file)
 
 mp.compute_dem_param()
