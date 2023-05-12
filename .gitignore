@@ -4,6 +4,23 @@ ex2_romania_retezat/outputs/*
 ex1_norway_finse/inputs/climate/*
 ex1_norway_finse/outputs/*
 
+ex1_norway_finse/FSM
+ex1_norway_finse/dump.txt
+ex1_norway_finse/fsm_sims/
+ex1_norway_finse/inputs/dem/ASTER_Finse.tif.aux.xml
+ex1_norway_finse/inputs/dem/mesher_config.py
+ex1_norway_finse/inputs/dem/mesher_config/
+ex1_norway_finse/outputmap.tif
+
+ex3_switzerland_davos/dump.txt
+ex3_switzerland_davos/fsm_sims/
+ex3_switzerland_davos/inputs/climate/tmp/
+ex3_switzerland_davos/landform.tif
+ex3_switzerland_davos/output_raster.tif
+ex3_switzerland_davos/outputs/
+
+
+
 .idea/
 
 # Byte-compiled / optimized / DLL files

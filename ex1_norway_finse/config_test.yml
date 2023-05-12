@@ -1,12 +1,12 @@
 project:
-    name: Finse
+    name: Config for testing TopoPyScale with Github Actions
     description: Downscaling for Finse, Benchmarking TopoPyScale
     authors:
         - Filhol S.
         - Aalstad K.
         - Fiddes J.
     date: Nov 2021
-    directory: ./TopoPyScale_examples/ex1_norway_finse/
+    directory: 
     start: 2018-10-01
     end: 2018-12-31
     split:
@@ -37,7 +37,7 @@ sampling:
 
     toposub:
         clustering_method: minibatchkmean
-        n_clusters: 10
+        n_clusters: 5
         random_seed: 2
         clustering_features: {'x':1, 'y':1, 'elevation':4, 'slope':1, 'aspect_cos':1, 'aspect_sin':1, 'svf':1}
 
