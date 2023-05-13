@@ -6,7 +6,7 @@ project:
         - Aalstad K.
         - Fiddes J.
     date: Nov 2021
-    directory: ./TopoPyScale_examples/ex1_norway_finse/
+    directory: /home/simonfi/github/TopoPyScale_examples/ex1_norway_finse
     start: 2018-10-01
     end: 2018-12-31
     split:

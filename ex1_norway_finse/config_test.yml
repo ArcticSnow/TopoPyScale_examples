@@ -43,7 +43,6 @@ sampling:
 
 toposcale:
     interpolation_method: idw
-    pt_sampling_method: nearest
     LW_terrain_contribution: True
 
 outputs:
