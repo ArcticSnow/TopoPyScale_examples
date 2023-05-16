@@ -4,7 +4,7 @@ project:
     authors:
         - Filhol S.
     date: Nov 2021
-    directory: /home/simonfi/github/TopoPyScale_examples/ex2_romania_retezat/
+    directory: 
     start: 2020-01-01
     end: 2021-08-31
     split:

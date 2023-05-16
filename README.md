@@ -1,7 +1,8 @@
 # TopoPyScale_examples
 Set of examples on which to run [TopoPyScale](https://github.com/ArcticSnow/TopoPyScale)
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ArcticSnow/TopoPyScale_examples/main?labpath=https%3A%2F%2Fgithub.com%2FArcticSnow%2FTopoPyScale_examples%2Fblob%2Fmain%2Fex1_norway_finse%2Fex1_norway.ipynb)
+The example `ex1_norway_finse` contains two Jupyter Notebooks available on [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ArcticSnow/TopoPyScale_examples/main?labpath=https%3A%2F%2Fgithub.com%2FArcticSnow%2FTopoPyScale_examples%2Fblob%2Fmain%2Fex1_norway_finse%2Fex1_norway.ipynb)
+
 
 **WARNINGS**
 1. You need a Python VE setup with TopoPyScale installed
