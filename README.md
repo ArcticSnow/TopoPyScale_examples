@@ -171,7 +171,7 @@ This numeric ID is provided then as an argument to ```run_worker.py``` and simpl
 
 Then simply run:
 ```
-sbatch slurm_worker.py
+sbatch slurm_worker.sh
 ```
 
 ## Adding an example site
