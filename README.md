@@ -159,15 +159,20 @@ Runs run_master.py as a single job, once. The simulation is now setup (climate, 
 sbatch slurm_master.sh
 ```
 
-### **slurm_master.sh**
+### **slurm_worker.sh**
 
-Runs a single job for every simulation year (solar calc and downscaling plus any simulation with FSM if desired) in parallel on the cluster. These are embarassingly parallel uin that they are completely independent jobs. As we parallelise in time even file access is not overlapping (which can cause issues with netcdf climate files and multiple readers).
+Runs a single job for every simulation year (solar calc and downscaling plus any simulation with FSM if desired) in parallel on the cluster. These are embarassingly parallel in that they are completely independent jobs. As we parallelise in time even file access is not overlapping (which can cause issues with netcdf climate files and multiple readers).
 
 The following line must be edited to reflect the number of years in your downscaling job, in this case 23.
 ```
 #SBATCH --array=1-23 # this is number of years in downscaling job (23)
 ```
 This numeric ID is provided then as an argument to ```run_worker.py``` and simply indexes a year vector in ```run_worker.py```
+
+Then simply run:
+```
+sbatch slurm_worker.py
+```
 
 ## Adding an example site
 
