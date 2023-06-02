@@ -1,0 +1,66 @@
+project:
+    name: ex4
+    description: Downscaling for Sry Darya B1
+    authors:
+        - Fiddes J.
+        - Filhol S.
+        - Aalstad K.
+    date: Feb 2023
+    directory: ./ex4_slurm_cluster/
+    start: 2000-01-01
+    end: 2022-12-31
+    extent:  [42.3058436852906965, 41.2235769463910984,69.9501329079825069, 71.9811673400160998]
+    
+    CPU_cores: 4
+    climate: era5
+
+    split:
+        IO: False       # Flag to split downscaling in time or not
+        time: 5        # number of years to split timeline in
+        space: None     # NOT IMPLEMENTED
+
+
+climate:
+    era5:
+        path: /pth/to/your/climate/data/
+        product: reanalysis
+        timestep: 1H
+        plevels: [300, 500,600, 700,800, 850, 900, 1000]
+        download_threads: 12
+
+dem:
+    file: dem.tif
+    epsg: 32642
+    horizon_increments: 10
+    dem_resol: 500
+
+sampling:
+    method: toposub
+    points:
+        csv_file:
+
+    toposub:
+        clustering_method: minibatchkmean
+        n_clusters: 300
+        random_seed: 2
+        clustering_features: {'x':1, 'y':1, 'elevation':1, 'slope':1, 'aspect_cos':1, 'aspect_sin':1, 'svf':1}
+
+toposcale:
+    interpolation_method: idw
+    pt_sampling_method: nearest
+    LW_terrain_contribution: True
+
+outputs:
+    variables: all  # list or combination name
+    file:
+        clean_outputs: False
+        clean_FSM: True
+        df_centroids: df_centroids.pck
+        ds_param: ds_param.nc
+        ds_solar: ds_solar.nc
+        da_horizon: da_horizon.nc
+        landform: landform.tif
+        downscaled_pt: down_pt_*.nc
+
+clean_up:
+    delete_tmp_dirs: False
