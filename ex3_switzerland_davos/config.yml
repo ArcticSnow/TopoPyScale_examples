@@ -24,6 +24,8 @@ climate:
         timestep: 1H
         plevels: [300,400, 500,600, 700,1000]
         download_threads: 12
+        realtime: False
+    precip_lapse_rate: True
 
 dem:
     file: dem_SRTM1_proj.tif
@@ -47,6 +49,7 @@ toposcale:
     LW_terrain_contribution: True
 
 outputs:
+    directory:
     variables: all  # list or combination name
     file:
         clean_outputs: False
@@ -57,3 +60,5 @@ outputs:
         da_horizon: da_horizon.nc
         landform: landform.tif
         downscaled_pt: down_pt_*.nc
+clean_up:
+    delete_tmp_dirs: True
