@@ -1,7 +1,7 @@
 import pandas as pd
 from TopoPyScale import topoclass as tc
 from matplotlib import pyplot as plt
-from TopoPyScale import topo_sim as sim
+from TopoPyScale import sim_fsm as sim
 
 
 

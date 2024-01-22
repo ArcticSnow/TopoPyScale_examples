@@ -19,7 +19,7 @@ mp.to_fsm()
 print('\n ------------------------------- \n')
 print('You may use these files to run simulation using the Fortran model FSM')
 if input('Run FSM? This requires FSM has been compiled. (y/n)') == 'y':
-    from TopoPyScale import topo_sim as sim
+    from TopoPyScale import sim_fsm as sim
     from TopoPyScale import topo_plot as plot
     import matplotlib.pyplot as plt
     
