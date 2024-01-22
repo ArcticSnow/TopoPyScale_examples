@@ -22,6 +22,8 @@ climate:
         timestep: 1H
         plevels: [700,750,800,850,900,950,1000]
         download_threads: 12
+        realtime: False
+    precip_lapse_rate: True
 
 dem:
     file: SRTM_90m_retezat.tif
@@ -39,13 +41,13 @@ sampling:
         random_seed: 2
         clustering_features: {'x':1, 'y':1, 'elevation':4, 'slope':1, 'aspect_cos':1, 'aspect_sin':1, 'svf':1}
 
-
 toposcale:
     interpolation_method: idw
     pt_sampling_method: nearest
     LW_terrain_contribution: True
 
 outputs:
+    directory:
     variables: all  # list or combination name
     file:
         clean_outputs: True
@@ -56,3 +58,5 @@ outputs:
         da_horizon: da_horizon.nc
         landform: landform.tif
         downscaled_pt: down_pt_*.nc
+clean_up:
+    delete_tmp_dirs: True

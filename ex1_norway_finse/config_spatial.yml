@@ -49,7 +49,7 @@ toposcale:
     LW_terrain_contribution: True
 
 outputs:
-    directory: 
+    directory: outputs
     variables: all  # list or combination name
     file:
         clean_outputs: True
