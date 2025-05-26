@@ -4,6 +4,7 @@ config_file = './config.yml'
 
 # create a topopyscale python object
 mp = tc.Topoclass(config_file)
+mp.get_era5()
 
 # Downscaling preparation routines
 mp.compute_dem_param()

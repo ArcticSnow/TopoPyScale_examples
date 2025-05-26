@@ -8,7 +8,7 @@ project:
     date: Nov 2021
     directory: ./
     start: 2018-09-01
-    end: 2021-08-31
+    end: 2019-08-31
     split:
         IO: False
         time: 1  # run indivudal batch in time
@@ -22,9 +22,13 @@ climate:
         path: inputs/climate/
         product: reanalysis
         timestep: 1H
-        plevels: [700,750,775,800,825,850,875,900,925,950,975,1000]
+        plevels: [700,750,800,850,900,950,1000]
         download_threads: 12
         realtime: False
+        data_repository: cds
+        cds_output_format: netcdf
+        cds_download_foramt: unarchived
+        rm_daily: False
     precip_lapse_rate: True
 
 dem:
@@ -39,9 +43,9 @@ sampling:
 
     toposub:
         clustering_method: minibatchkmean
-        n_clusters: 10
+        n_clusters: 15
         random_seed: 2
-        clustering_features: {'x':1, 'y':1, 'elevation':4, 'slope':1, 'aspect_cos':1, 'aspect_sin':1, 'svf':1}
+        clustering_features: {'x':1, 'y':1, 'elevation':1, 'slope':1, 'aspect_cos':1, 'aspect_sin':1, 'svf':1}
 
 toposcale:
     interpolation_method: idw

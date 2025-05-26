@@ -8,6 +8,7 @@ print('\n ------------------------------- \n')
 config_file = './config_test.yml'
 mp = tc.Topoclass(config_file)
 
+mp.get_era5()
 mp.compute_dem_param()
 mp.extract_topo_param()
 mp.compute_solar_geometry()

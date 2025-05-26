@@ -16,6 +16,7 @@ from TopoPyScale import sim_fsm as sim
 # Load Configuration
 config_file = './config.ini'
 mp = tc.Topoclass(config_file)
+mp.get_era5()
 
 # Compute parameters of the DEM (slope, aspect, sky view factor)
 mp.compute_dem_param()

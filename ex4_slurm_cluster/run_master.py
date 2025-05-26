@@ -9,7 +9,7 @@ import pandas as pd
 startTime = datetime.now()
 config_file = './config.yml'
 mp = tc.Topoclass(config_file)
-
+mp.fetch_era5()
 
 wdir = mp.config.project.directory
 

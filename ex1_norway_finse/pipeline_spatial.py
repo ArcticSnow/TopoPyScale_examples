@@ -1,4 +1,5 @@
 from TopoPyScale import topoclass as tc
+import glob
 
 
 #------------------------------------------
@@ -8,6 +9,7 @@ print('\n ------------------------------- \n')
 
 config_file = './config_spatial.yml'
 mp = tc.Topoclass(config_file)
+mp.get_era5()
 mp.compute_dem_param()
 mp.extract_topo_param()
 mp.compute_solar_geometry()
@@ -23,10 +25,17 @@ if input('Run FSM? This requires FSM has been compiled. (y/n)') == 'y':
     from TopoPyScale import topo_plot as plot
     import matplotlib.pyplot as plt
     
-    for i in range(mp.config.sampling.toposub.n_clusters):
-        nsim = "{:0>2}".format(i)
-        sim.fsm_nlst(31, "./outputs/FSM_pt_"+ nsim +".txt", 24)
-        sim.fsm_sim("./fsm_sims/nlst_FSM_pt_"+ nsim +".txt", "./FSM")
+    met_flist = glob.glob("./outputs/FSM_pt_*")
+    met_flist.sort()
+    
+    for nsim, met_file in enumerate(met_flist):
+        sim.fsm_nlst(31, met_file, 24)
+        
+    nlst_flist = glob.glob("./fsm_sims/nlst_FS*")
+    nlst_flist.sort()
+    
+    for nsim, nlst_file in enumerate(nlst_flist):
+        sim.fsm_sim(nlst_file, "./FSM")
 
     # extract GST results(8)
     df = sim.agg_by_var_fsm(var='gst')

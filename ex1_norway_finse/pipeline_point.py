@@ -7,6 +7,7 @@ print('\n ------------------------------- \n')
 
 config_file = './config_point.yml'
 mq = tc.Topoclass(config_file)
+mq.get_era5()
 mq.compute_dem_param()
 mq.extract_topo_param()
 mq.compute_solar_geometry()

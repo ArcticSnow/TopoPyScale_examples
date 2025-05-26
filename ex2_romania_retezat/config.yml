@@ -23,6 +23,10 @@ climate:
         plevels: [700,750,800,850,900,950,1000]
         download_threads: 12
         realtime: False
+        data_repository: cds
+        cds_output_format: netcdf
+        cds_download_foramt: unarchived
+        rm_daily: False
     precip_lapse_rate: True
 
 dem:
