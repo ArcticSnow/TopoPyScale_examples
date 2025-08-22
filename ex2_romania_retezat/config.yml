@@ -12,9 +12,19 @@ project:
         time: 1  # run indivudal batch in time
         space: None  # to be implemented
     extent: 
-    CPU_cores: 4
     climate: era5
-    
+    parallelization:
+        downscaling_method: dask
+        setting:
+            multicore:
+                CPU_cores: 6
+            dask:
+                n_workers: 6
+                threads_per_worker: 1
+                memory_target_fraction: 0.95
+                memory_limit: 1.2GB
+
+
 climate:
     era5:
         path: inputs/climate/
@@ -27,6 +37,7 @@ climate:
         cds_output_format: netcdf
         cds_download_foramt: unarchived
         rm_daily: False
+        zarr_store: ERA5.zarr
     precip_lapse_rate: True
 
 dem:
@@ -41,9 +52,9 @@ sampling:
 
     toposub:
         clustering_method: minibatchkmean
-        n_clusters: 10
+        n_clusters: 50
         random_seed: 2
-        clustering_features: {'x':1, 'y':1, 'elevation':4, 'slope':1, 'aspect_cos':1, 'aspect_sin':1, 'svf':1}
+        clustering_features: {'x':1, 'y':1, 'elevation':1, 'slope':1, 'aspect_cos':1, 'aspect_sin':1, 'svf':1}
 
 toposcale:
     interpolation_method: idw
@@ -54,13 +65,14 @@ outputs:
     directory:
     variables: all  # list or combination name
     file:
-        clean_outputs: True
+        clean_outputs: False
         clean_FSM: True
         df_centroids: df_centroids.pck
         ds_param: ds_param.nc
         ds_solar: ds_solar.nc
         da_horizon: da_horizon.nc
         landform: landform.tif
-        downscaled_pt: down_pt_*.nc
+        downscaled_pt: #down_pt_*.nc
+        zarr_store: down.zarr
 clean_up:
     delete_tmp_dirs: True
