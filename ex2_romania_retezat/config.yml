@@ -35,7 +35,7 @@ climate:
         realtime: False
         data_repository: cds
         cds_output_format: netcdf
-        cds_download_foramt: unarchived
+        cds_download_format: unarchived
         rm_daily: False
         zarr_store: ERA5.zarr
     precip_lapse_rate: True
